@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClonerNews</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Cloner<span class="highlight">News</span></h1>
+            <div id="live-updates" class="live-updates"></div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container post-controls">
+            <button id="load-stories" class="btn">Load Stories</button>
+            <button id="load-jobs" class="btn">Load Jobs</button>
+            <button id="load-polls" class="btn">Load Polls</button>
+        </div>
+
+        <section id="post-list" class="container"></section>
+        
+        <div id="load-more" class="load-more-btn">Load More</div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ClonerNews.</p>
+    </footer>
+
+    <script src="./src/app.js" type="module"></script>
+</body>
+</html>
