@@ -3,9 +3,13 @@ import { loadComments } from './CommentList.js';
 export const createPostElement = (post) => {
     const postElement = document.createElement('div');
     postElement.classList.add('post');
-    
+
+    // Generate link if post has a URL
+    const postLink = post.url ? `<a href="${post.url}" target="_blank" rel="noopener noreferrer">${post.title || '(Untitled)'}</a>` 
+                              : post.title || '(Untitled)';
+
     let contentHTML = `
-        <h2>${post.title || '(Untitled)'}</h2>
+        <h2>${postLink}</h2>
         <small>by ${post.by || 'Unknown'} | ${new Date(post.time * 1000).toLocaleString()}</small>
     `;
 

@@ -13,6 +13,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: center; /* Center the content vertically if needed */
 }
 
 header {
@@ -20,6 +22,7 @@ header {
     padding: 20px;
     text-align: center;
     border-bottom: 2px solid #333;
+    width: 100%;
 }
 
 h1 {
@@ -35,6 +38,9 @@ h1 .highlight {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the contents inside the container */
 }
 
 footer {
@@ -44,18 +50,21 @@ footer {
     padding: 10px;
     margin-top: auto;
     border-top: 2px solid #333;
+    width: 100%;
 }
 
 /* Live updates */
 .live-updates {
     color: #ffcc00;
     margin-top: 10px;
+    text-align: center;
 }
 
-/* Post controls */
+/* Post controls (buttons) */
 .post-controls {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 20px; /* Space between the buttons */
     margin: 20px 0;
 }
 
@@ -64,7 +73,6 @@ footer {
     color: #121212;
     border: none;
     padding: 10px 20px;
-    margin: 0 10px;
     cursor: pointer;
     font-size: 1rem;
     border-radius: 5px;
@@ -75,9 +83,13 @@ footer {
     background-color: #00e6b3;
 }
 
+
 /* Post list */
 #post-list {
     margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the post list items */
 }
 
 .post {
@@ -88,6 +100,8 @@ footer {
     border-left: 4px solid #ff6600;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    width: 100%; /* Full width of container */
+    max-width: 800px; /* Limit maximum width */
 }
 
 .post:hover {
@@ -148,27 +162,19 @@ footer {
 .comment small {
     color: #bbb;
 }
+a {
+    color: #00ffcc; /* White color for links */
+    text-decoration: none; /* Optional: removes underline */
+}
+
+a:hover {
+    color: #00ffcc; /* Optional: slightly different color on hover */
+    text-decoration: underline; /* Optional: underline on hover */
+}
 
 /* Nested comments */
 .nested-comments {
     margin-left: 15px;
-}
-
-/* Load More Button */
-.load-more-btn {
-    background-color: #ff6600;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    margin: 20px auto;
-    width: 200px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.load-more-btn:hover {
-    background-color: #ff4500;
 }
 
 /* Responsive Design */
